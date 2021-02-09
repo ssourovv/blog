@@ -1,0 +1,19 @@
+<%- include('partials/header'); -%>
+
+    <h1>Home</h1>
+    <p>
+        <%= homeText %>
+    </p>
+
+    <% if (postsArray.length> 0) { %>
+        <% postsArray.forEach((value)=> { %>
+            <h1>
+                <%= value.postTitle %>
+            </h1>
+            <p>
+                <%= value.postContentTrimVersion %>
+                    <a href="/posts/<%= value.postTitle %>">Read More</a>
+            </p>
+            <% }) %>
+                <% } %>
+                    <%- include('partials/footer'); -%>
